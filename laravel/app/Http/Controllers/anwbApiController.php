@@ -30,12 +30,12 @@ class anwbApiController extends Controller
         $httpResponse = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         if ($httpResponse >= 400 || $httpResponse < 200) {
-            Log::error('API responded with an unexpected HTTP status',['status' => $httpResponse, 'rs' => json_decode($response, true)]);
+            Log::channel('dataProcess')->error('API responded with an unexpected HTTP status',['status' => $httpResponse, 'rs' => json_decode($response, true)]);
         } else {
             $this->processData(json_decode($response, true));
         }
 
-        Log:info('getData completed');
+        Log::channel('dataProcess')->info('getData completed');
     }
 
     /**
@@ -67,14 +67,14 @@ class anwbApiController extends Controller
                                 unset($newIncident['stop']);
                                 $newRoadProperty->fill($newIncident);
                                 if(!$newRoadProperty->save()){
-                                    Log::warning('Road properties not saved');
+                                    Log::channel('dataProcess')->warning('Road property not saved',[$newIncident,$newRoadProperty]);
                                 }
 
                                 $newIndcidentProperty = new IncidentProperty();
                                 $newIndcidentProperty->rp_id = $newRoadProperty->id;
                                 $newIndcidentProperty->fill($newIncident);
                                 if(!$newIndcidentProperty->save()){
-                                    Log::warning('Incident properties not saved');
+                                    Log::channel('dataProcess')->warning('Incident property not saved',[$newIncident,$newIndcidentProperty]);
                                 }
 
                                 foreach ($newIncident['events'] as $event) {
@@ -82,8 +82,8 @@ class anwbApiController extends Controller
                                     $newRoadEvent = new RoadEvent();
                                     $newRoadEvent->rp_id = $newRoadProperty->id;
                                     $newRoadEvent->fill($newEvent);
-                                    if($newRoadEvent->save()){
-                                        Log::warning('Road event not saved');
+                                    if(!$newRoadEvent->save()){
+                                        Log::channel('dataProcess')->warning('Road event not saved', [$newEvent, $newRoadEvent]);
                                     }
                                 }
 
@@ -99,7 +99,7 @@ class anwbApiController extends Controller
                     }
                 }
             } else {
-                Log::warning('Road data is not saved');
+                Log::channel('dataProcess')->warning('Road data is not saved',[$road]);
             }
         }
     }
@@ -159,7 +159,7 @@ class anwbApiController extends Controller
                     'updated_at' => date('Y-m-d H:i:s')
                 ]);
             } catch (Exception $e){
-                Log::warning('Bounds not saved');
+                Log::channel('dataProcess')->warning('Bounds not saved',[$newIncident,$e]);
             }
 
         }
