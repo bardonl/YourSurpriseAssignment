@@ -24,18 +24,31 @@ class anwbApiController extends Controller
     {
         $ch = curl_init(env('API_URL') . '?apikey=' . env('API_KEY'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_CAINFO, $_SERVER['DOCUMENT_ROOT'] . "/../cacert.pem");
+        curl_setopt($ch, CURLOPT_CAINFO, $_SERVER['DOCUMENT_ROOT'] . "../cacert.pem");
 
         $response = curl_exec($ch);
         $httpResponse = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $errorText = curl_error($ch);
+        $error = curl_errno($ch);
 
         if ($httpResponse >= 400 || $httpResponse < 200) {
-            Log::channel('dataProcess')->error('API responded with an unexpected HTTP status',['status' => $httpResponse, 'rs' => json_decode($response, true)]);
+            Log::channel('dataProcess')
+            ->error('API responded with an unexpected HTTP status',
+            [
+                'status' => $httpResponse,
+                'rs' => json_decode($response, true),
+                'http_response'=>$httpResponse,
+                'error_text' => $errorText,
+                'error' => $error,
+                'doc_root' => $_SERVER['DOCUMENT_ROOT']
+            ]);
         } else {
             $this->processData(json_decode($response, true));
         }
 
         Log::channel('dataProcess')->info('getData completed');
+
+        return;
     }
 
     /**
@@ -90,9 +103,23 @@ class anwbApiController extends Controller
                                 if (key_exists('bounds', $newIncident)) {
                                     $this->saveBounds($newIncident, 'bounds', $newIndcidentProperty->id);
                                 }
-                                if (key_exists('loc', $newIncident)) {
+
+                                if(key_exists('from_loc',$newIncident)){
+                                    $arr['data']['from_loc'] = $newIncident['from_loc'];
+                                    $this->saveBounds($arr, 'data', $newIndcidentProperty->id);
+                                    unset($arr);
+                                }
+
+                                if(key_exists('to_loc',$newIncident)){
+                                    $arr['data']['to_loc'] = $newIncident['to_loc'];
+                                    $this->saveBounds($arr, 'data', $newIndcidentProperty->id);
+                                    unset($arr);
+                                }
+
+                                if(key_exists('loc', $newIncident)) {
                                     $arr['data']['loc'] = $newIncident['loc'];
                                     $this->saveBounds($arr, 'data', $newIndcidentProperty->id);
+                                    unset($arr);
                                 }
                             }
                         }
@@ -101,6 +128,7 @@ class anwbApiController extends Controller
             } else {
                 Log::channel('dataProcess')->warning('Road data is not saved',[$road]);
             }
+
         }
     }
 

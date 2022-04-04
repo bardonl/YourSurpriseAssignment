@@ -17,12 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d75583-cba4-4fd7-982f-8ecc2fdc059a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +119,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../airtraffic-sim" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel/public/images/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\public" />
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\public\images\icons" />
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\resources\views" />
       <recent name="C:\wamp64\www\YourSupriseAssignment" />
     </key>
   </component>
@@ -148,7 +153,8 @@
       <workItem from="1646316183215" duration="4495000" />
       <workItem from="1646393515785" duration="4522000" />
       <workItem from="1646653994476" duration="9216000" />
-      <workItem from="1646742006072" duration="1616000" />
+      <workItem from="1646742006072" duration="4726000" />
+      <workItem from="1646830909821" duration="1050000" />
     </task>
     <servers />
   </component>
@@ -188,9 +194,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1186" y="246" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1646234360874" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1646232351958">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1646749300623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1646749300623" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1646749853448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1646749853448" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1646232351958" />
     <state x="566" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1646657724207">
       <screen x="0" y="0" width="1920" height="1040" />

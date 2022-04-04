@@ -13,7 +13,7 @@ class RoadProperty extends Model
 
     public function road()
     {
-        $this->belongsTo(Road::class);
+        return $this->belongsTo(Road::class);
     }
 
     public function roadEvent()
