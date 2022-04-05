@@ -16,7 +16,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9d75583-cba4-4fd7-982f-8ecc2fdc059a" name="Default Changelist" comment="" />
+    <list default="true" id="b9d75583-cba4-4fd7-982f-8ecc2fdc059a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,15 +116,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel/public/images/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\public" />
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\public\images\icons" />
+      <recent name="C:\wamp64\www\YourSurpriseAssignment\laravel\resources\views" />
       <recent name="C:\wamp64\www\YourSupriseAssignment" />
     </key>
   </component>
@@ -134,6 +147,14 @@
       <workItem from="1646057695587" duration="738000" />
       <workItem from="1646058457205" duration="706000" />
       <workItem from="1646059210004" duration="533000" />
+      <workItem from="1646059762594" duration="2337000" />
+      <workItem from="1646141179601" duration="1587000" />
+      <workItem from="1646230971090" duration="9320000" />
+      <workItem from="1646316183215" duration="4495000" />
+      <workItem from="1646393515785" duration="4522000" />
+      <workItem from="1646653994476" duration="9216000" />
+      <workItem from="1646742006072" duration="4726000" />
+      <workItem from="1646830909821" duration="1050000" />
     </task>
     <servers />
   </component>
@@ -162,12 +183,30 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="165" key="SettingsEditor" timestamp="1646058253207">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1646656311620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1646058253207" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1646656311620" />
+    <state x="1186" y="246" key="NewPhpClassDialog" timestamp="1646234360874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1186" y="246" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1646234360874" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1646749300623">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1646749300623" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1646749853448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1646749853448" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1646232351958" />
+    <state x="566" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1646657724207">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="566" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1646657724207" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1646059546761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

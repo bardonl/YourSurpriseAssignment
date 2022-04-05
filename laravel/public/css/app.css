@@ -1,0 +1,154 @@
+
+/* General settings */
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,a,p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: antiquewhite;
+}
+
+a,p,text,textarea {
+    font-weight: 200;
+}
+
+/* Flex settings */
+
+.flex {
+    display:flex;
+}
+
+.fd-c{
+    flex-direction: column;
+}
+
+.fd-r {
+    flex-direction: row;
+}
+
+
+/* Topbar */
+.top-bar{
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    background-color: #274472;
+}
+
+.logo-container{
+    margin-left: 15px;
+    width: auto;
+    height: 75px;
+}
+
+.logo{
+    width:75px;
+    height:75px;
+    filter: invert(90%) sepia(22%) saturate(479%) hue-rotate(316deg) brightness(107%) contrast(96%);
+}
+
+.site-name{
+    align-self: center;
+    color: antiquewhite;
+}
+
+/* Main content */
+
+.main-content {
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: #C3E0E5;
+    height: 100vh;
+}
+
+/* Incident segments */
+
+.incidents-overview{
+    position: relative;
+    margin-bottom: 15px;
+    width: 400px;
+    background-color: #5885AF;
+    border-radius: 5px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.overview-title{
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.collection{
+    justify-content: start;
+}
+
+.box{
+    top: 0;
+    height: 65px;
+    background-color: #41729F;
+}
+
+.box:hover{
+    background-color: #274472;
+    cursor: pointer;
+}
+
+.title{
+    align-self: center;
+    margin-left: 5px;
+}
+
+.last-updated{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.maps {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 800px;
+}
+
+.roads{
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.road > h5 {
+    margin-left: 5px;
+}
+
+.road:hover{
+    cursor: pointer;
+}
+
+.segments{
+    display:none;
+}
+
+.segment > p {
+    margin-left: 5px;
+}
+
+.segment{
+    border-top:1px solid #274472 ;
+}
+
+.segment:last-child{
+    border-bottom:1px solid #274472 ;
+}
