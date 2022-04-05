@@ -22,6 +22,11 @@ class anwbApiController extends Controller
      */
     public function getData()
     {
+
+        // if($request['key'] !== env('LOCAL_KEY')){
+        //     Log::channel('dataProcess')->warning('Unauthorised');
+        // }
+
         $ch = curl_init(env('API_URL') . '?apikey=' . env('API_KEY'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_CAINFO, $_SERVER['DOCUMENT_ROOT'] . "../cacert.pem");

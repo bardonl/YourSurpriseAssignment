@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/incidents/get',[IncidentsController::class,"getIncidents"]);
-//Route::get('/anwb/save',[anwbApiController::class,"getData"]);
+//Route::get('/anwb/getData',[anwbApiController::class,"getData"]);
