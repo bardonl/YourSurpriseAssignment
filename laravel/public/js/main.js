@@ -1,5 +1,5 @@
 
-L.mapbox.accessToken = 'pk.eyJ1IjoiYmFyZG8tbmwiLCJhIjoiY2wwdG05ZHZ0MG4xYjNrcW9pN3Jxb2l4bCJ9.MF7tAHMWvRdHskAKNVN1Pw';
+L.mapbox.accessToken = '[your-token]';
 
 var map = L.mapbox.map('map').setView([52.51667,5.48333],8).addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
 
