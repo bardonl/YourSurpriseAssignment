@@ -29,7 +29,7 @@ class IncidentsController extends Controller
 
         } else {
             $created_at = Road::max('created_at');
-
+            $created_at = date('Y-m-d H:i', strtotime($created_at));
             if($request['category'] === 'all'){
                 $categories = RoadProperty::distinct()->select('category')->get();
                 $categories = $categories->toArray();
@@ -62,7 +62,7 @@ class IncidentsController extends Controller
         if($category){
             $roads = DB::table('roads')
             ->join('road_properties', 'roads.id','=','road_properties.road_id')
-            ->where('roads.created_at',$created_at)
+            ->whereBetween('roads.created_at',[$created_at . ':00', $created_at . ':59'])
             ->where('road_properties.category',$category)
             ->distinct()
             ->select('roads.*')->get();
