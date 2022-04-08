@@ -25,6 +25,7 @@ class anwbApiController extends Controller
 
         // if($request['key'] !== env('LOCAL_KEY')){
         //     Log::channel('dataProcess')->warning('Unauthorised');
+        //     return;
         // }
 
         $ch = curl_init(env('API_URL') . '?apikey=' . env('API_KEY'));
