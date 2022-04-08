@@ -1,10 +1,14 @@
 <p align="center"><h1>YourSurprise assignment: Road inspector<h1></p>
 
+## About
+
+This project is build using [Laravel 9](https://laravel.com/), php 8, mysql 8 and [MapBox](https://www.mapbox.com/).
+
 ## Requirements
 - [Composer, prefferably installed globaly](https://getcomposer.org/download/)
-- [PHP 8.* (Should come with wamp)](https://www.php.net/downloads)
-- [Laravel 9.* (Laravel 8 should work aswell, but is untested)](https://laravel.com/)
-- [MySql 8.* (Should come with wamp)](https://www.mysql.com/)
+- [PHP 8.* (Should come with wamp if you are using a local development server)](https://www.php.net/downloads)
+- [MySql 8.* (Should come with wamp if you are using a local development server)](https://www.mysql.com/)
+- [MapBox public access token](https://www.mapbox.com/)
 
 If used local:
 - A computer 🙃 (Windows or Linux)
@@ -48,6 +52,8 @@ If you are using ubuntu follow this [guide](https://linuxhint.com/install_apache
    
 <br>- **step 10**: Run the following command (given you are still in the projects folder) ```php artisan key:generate```
 <br>- **Step 11**: Run ```php artisan migrate```
+<br>- **step 12**: Create an account on [MapBox](https://www.mapbox.com/) and generate a public access token in the Tokens page.
+<br>- **step 13**: Copy this token and paste it in public/js/main.js by replacing ```[your-token]```
 
 This concludes the basic setup. Now we need to setup the cronjobs.
 <br> All you have to do is run the following command: ```php artisan schedule:work```
